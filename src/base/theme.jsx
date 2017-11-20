@@ -29,7 +29,7 @@ const muiTheme = getMuiTheme({
     },
     fontFamily: 'Roboto, sans-serif',
     palette: {
-        primary1Color: red500,
+        primary1Color: blue500,
         primary2Color: blue700,
         primary3Color: lightBlack,
         accent1Color: purpleA200,
