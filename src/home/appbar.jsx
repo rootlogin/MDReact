@@ -6,26 +6,15 @@ import MenuItem from 'material-ui/MenuItem';
 import FlatButton from 'material-ui/FlatButton';
 import Toggle from 'material-ui/Toggle';
 import Drawer from 'material-ui/Drawer';
-import { Tabs, Tab } from 'material-ui/Tabs';
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
 import { white, } from 'material-ui/styles/colors';
-import SwipeableViews from 'react-swipeable-views';
-import PageOneCard from './pageone.jsx';
 
 
 
-const styles = {
-  headline: {
-    fontSize: 24,
-    paddingTop: 16,
-    marginBottom: 12,
-    fontWeight: 400,
-  },
-  slide: {
-    padding: 10,
-  },
-};
+
+
+
 
 
 const AppBarMenu = () => (
@@ -57,7 +46,6 @@ class AppBarComposition extends Component {
     super(props);
     this.state = {
       open: false,
-      tabIndex: 0,
     };
   }
 
@@ -65,12 +53,6 @@ class AppBarComposition extends Component {
    * change左侧Drawer状态
    */
   onDrawerStateChange = () => this.setState({ open: !this.state.open });
-
-  onTabChecked = (value) => {
-    this.setState({
-      tabIndex: value,
-    });
-  };
 
 
   render() {
@@ -88,33 +70,7 @@ class AppBarComposition extends Component {
           <MenuItem onClick={this.onDrawerStateChange}>Menu Item 2</MenuItem>
         </Drawer>
 
-
-        <Tabs
-          onChange={this.onTabChecked}
-          value={this.state.tabIndex}
-        >
-          <Tab label="Tab One" value={0} />
-          <Tab label="Tab Two" value={1} />
-          <Tab label="Tab Three" value={2} />
-        </Tabs>
-        <SwipeableViews
-          index={this.state.tabIndex}
-          onChangeIndex={this.onTabChecked}
-        >
-          {/* <div>
-            <h2 style={styles.headline}>Tabs with slide effect</h2>
-            Swipe to see the next slide.<br />
-          </div> */}
-          <PageOneCard />
-
-          <div style={styles.slide}>
-            slide n°2
-          </div>
-          <div style={styles.slide}>
-            slide n°3
-          </div>
-        </SwipeableViews>
-      </div>
+        </div>
 
     );
   }

@@ -11,8 +11,9 @@ import ContentAdd from 'material-ui/svg-icons/content/add';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import spacing from 'material-ui/styles/spacing'
 import { fade } from 'material-ui/utils/colorManipulator';
-import Title from './appbar.jsx';
-import Theme from '../base/theme.jsx'
+import AppBar from './home/appbar.jsx';
+import TabPages from './home/tabpages.jsx'
+import Theme from './base/theme.jsx'
 
 
 
@@ -39,7 +40,8 @@ const FloatActionBar = () => {
 const Home = () => (
     <MuiThemeProvider muiTheme={Theme}>
         <div>
-            <Title />
+            <AppBar />
+            <TabPages/>
             <FloatActionBar />
         </div>
     </MuiThemeProvider>
