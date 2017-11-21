@@ -7,6 +7,5 @@ npm install --save-dev babel-core babel-loader babel-preset-es2015 babel-preset-
 
 * Step 2:
 
-dev command:npm start
-Or
-api command:npm run build
+dev : npm start
+api : npm run build
